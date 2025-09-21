@@ -1,7 +1,7 @@
 version: "3"
 services: 
     api:
-        build: .
+        image: seatedcarrot7/prince_fast_api
         depends_on:
             - postgres
         ports:
