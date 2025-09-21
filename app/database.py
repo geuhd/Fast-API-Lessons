@@ -8,14 +8,14 @@ from urllib.parse import urlparse
 from .config import settings
 
 # Parse DATABASE_URL
-url = urlparse(settings.DATABASE_URL)
+#url = urlparse(settings.DATABASE_URL)
 
-SQLALCHEMY_DATABASE_URL = (
-    f"postgresql://{url.username}:{url.password}"
-    f"@{url.hostname}:{url.port}{url.path}"
-)
+#SQLALCHEMY_DATABASE_URL = (
+    #f"postgresql://{url.username}:{url.password}"
+    #f"@{url.hostname}:{url.port}{url.path}"
+#)
 #SQLALCHEMY_DATABASE_URL = 'postgresql://<username>:<password>@<ip-address/hostname>/<database_name>'
-#SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
