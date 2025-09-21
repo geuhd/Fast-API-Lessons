@@ -15,7 +15,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-) 
+)  
 
 app.include_router(auth.router)
 app.include_router(post.router)
@@ -25,7 +25,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World ggth"}
 
 
 
